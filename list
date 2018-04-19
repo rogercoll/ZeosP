@@ -1,0 +1,151 @@
+./list.c:29: * list_add - add a new entry
+./list.c:43: * list_add_tail - add a new entry
+./list.c:69: * list_del - deletes entry from list.
+./list.c:82: * list_is_last - tests whether @list is the last entry in list @head
+./list.c:93: * list_empty - tests whether a list is empty
+Binary file ./bootsect matches
+Binary file ./system.out matches
+./bootsect.s:170:! well, that went ok, I hope. Now we have to reprogram the interrupts :-(
+./bootsect.s:227:! Well, that certainly wasn't fun :-(. Hopefully it works, and we don't
+./bootsect.s:228:! need no steenking BIOS anyway (except for the initial loading :-).
+./bootsect.s:255:! in:	es - starting address segment (normally 0x1000)
+./bootsect.s:367:	jnz	empty_8042_loop	! yes - loop
+./bootsect.s:392:  .word  0xFFFF           ! 4Gb - (0x100000*0x1000 = 4Gb)
+./bootsect.s:397:  .word  0xFFFF           ! 4Gb - (0x100000*0x1000 = 4Gb)
+./bootsect.s:402:  .word  0xFFFF           ! 4Gb - (0x100000*0x1000 = 4Gb)
+./bootsect.s:407:  .word  0xFFFF           ! 4Gb - (0x100000*0x1000 = 4Gb)
+./sched.c:2: * sched.c - initializes struct for task 0 anda task 1
+./sched.c:26:/* get_DIR - Returns the Page Directory address for task 't' */
+./sched.c:32:/* get_PT - Returns the Page Table address for task 't' */
+Binary file ./hardware.o matches
+Binary file ./user.o matches
+./entry.S:2: * entry.S - Entry point to system mode from user mode
+./entry.S:19:/**   0(%esp) - %ebx    \                        **/
+./entry.S:20:/**   4(%esp) - %ecx     |                       **/
+./entry.S:21:/**   8(%esp) - %edx     |                       **/
+./entry.S:22:/**   C(%esp) - %esi     | Register saved        **/
+./entry.S:23:/**  10(%esp) - %edi     |  by 'save'            **/
+./entry.S:24:/**  14(%esp) - %ebp     |                       **/
+./entry.S:25:/**  18(%esp) - %eax     |                       **/
+./entry.S:26:/**  1C(%esp) - %ds      |                       **/
+./entry.S:27:/**  20(%esp) - %es      |                       **/
+./entry.S:28:/**  24(%esp) - %fs      |                       **/
+./entry.S:29:/**  28(%esp) - %gs     /                        **/
+./entry.S:30:/**  2C(%esp) - %eip    \                        **/
+./entry.S:31:/**  30(%esp) - %cs      |                       **/
+./entry.S:32:/**  34(%esp) - %eflags  |  Return context saved **/
+./entry.S:33:/**  38(%esp) - %oldesp  |   by the processor.   **/
+./entry.S:34:/**  3C(%esp) - %oldss  /                        **/
+./Makefile:14:AS      = as --32
+Binary file ./libc.o matches
+Binary file ./libzeos.a matches
+Binary file ./soa_schedPerf.xls matches
+./utils.c:12:    size -= 4;
+./utils.c:18:    size --;
+./utils.c:28:    size -= 4;
+./utils.c:34:    size --;
+./utils.c:45:    size -= 4;
+./utils.c:51:    size --;
+./utils.c:97: * - modifies the 64-bit dividend _in_place_
+./utils.c:98: * - returns the 32-bit remainder
+./sys.c:2: * sys.c - Syscalls implementation
+./sys.c:34:	return current()->PID;
+./sys.c:91:	set_cr3(current()->dir_pages_baseAddr);
+./sys.c:120:    auxsize -= 1024;
+Binary file ./user matches
+./.bochsrc:14:debugger_log: -
+Binary file ./core matches
+Binary file ./sys.o matches
+Binary file ./system.o matches
+./include/system.h:2: * system.h - Capçalera del mòdul principal del sistema operatiu
+./include/list.h:49: * INIT_LIST_HEAD - Initializes an empty list.
+./include/list.h:55: * list_add - add a new entry
+./include/list.h:66: * list_add_tail - add a new entry
+./include/list.h:76: * list_del - deletes entry from list.
+./include/list.h:84: * list_is_last - tests whether @list is the last entry in list @head
+./include/list.h:92: * list_empty - tests whether a list is empty
+./include/list.h:98: * list_entry - get the struct for this entry
+./include/list.h:104:            ((type *)((char *)(ptr)-(unsigned long)(&((type *)0)->member)))
+./include/list.h:107: * list_for_each	-	iterate over a list
+./include/list.h:112:	for (pos = (head)->next; pos != (head); pos = pos->next)
+./include/list.h:115: * list_for_each_safe   -       iterate over a list safe against removal of list entry
+./include/list.h:121:        for (pos = (head)->next, n = pos->next; pos != (head); \
+./include/list.h:125: * list_first   -   returns the first list item
+./include/list.h:129:         (head)->next
+./include/interrupt.h:2: * interrupt.h - Definició de les diferents rutines de tractament d'exepcions
+Binary file ./include/asm.h matches
+./include/entry.h:2: * entry.h - Definició del punt d'entrada de les crides al sistema
+./include/segment.h:2: * segment.h - Constants de segment per a les entrades de la GDT
+./include/libc.h:2: * libc.h - macros per fer els traps amb diferents arguments
+./include/sched.h:2: * sched.h - Estructures i macros pel tractament de processos
+./include/sched.h:43:#define KERNEL_ESP(t)       	(DWord) &(t)->stack[KERNEL_STACK_SIZE]
+./include/types.h:2: * types.h - Definició de tipus i estructures de dades
+./include/types.h:47:  Word  ss1;                /* 16 |-    for each       */
+./include/types.h:62:  DWord edi;                /* 68 |- Saved registers   */
+./include/types.h:90:/*  /--------------------------------------\  */
+./include/types.h:92:/*  \--------------------------------------/  */
+./include/types.h:102:/*  /--------------------------------------\           */
+./include/types.h:104:/*  \--------------------------------------/           */
+./include/types.h:108:/*  TI    = 0 -> GDT ; 1 -> LDT                        */
+./include/types.h:115:/**   -----------------------------------------------------------------  **/
+./include/types.h:119:/**   -----------------------------------------------------------------  **/
+./include/hardware.h:2: * hardware.h - Rutines hardware per manegar els accesos a baix nivell
+./include/hardware.h:35: *   x = 0 -> activada
+./include/hardware.h:36: *   x = 1 -> no activada
+./include/mm.h:2: * mm.h - Capçalera del mòdul de gestió de memòria
+./include/io.h:2: * io.h - Definició de l'entrada/sortida per pantalla en mode sistema
+./hardware.c:94: *   x = 0 -> enabled
+./hardware.c:95: *   x = 1 -> disabled
+./hardware.c:106:  : "i" (0xfc)       /* 0xFF = 11111111 -> all bits disabled */
+Binary file ./bootsect.o matches
+Binary file ./user.out matches
+Binary file ./libschedperf.a matches
+Binary file ./mm.o matches
+./bochsout.txt:50:00000000000i[MEM0  ] Register memory access handlers: 0x0000000a0000 - 0x0000000bffff
+./bochsout.txt:52:00000000000i[MEM0  ] Register memory access handlers: 0x0000e0000000 - 0x0000e0ffffff
+./bochsout.txt:64:00000000000i[MEM0  ] Register memory access handlers: 0x0000fec00000 - 0x0000fec00fff
+./io.c:2: * io.c - 
+./sys_call_table.s:36:MAX_SYSCALL = (. - sys_call_table)/4
+./system.lds:3: *  system.lds - Linker Script for ZeOS system image.
+Binary file ./entry.o matches
+./.bochsrc_gdb:14:debugger_log: -
+./interrupt.c:2: * interrupt.c -
+./interrupt.c:25:  'b','n','m',',','.','-','\0','*',
+./interrupt.c:28:  '8','9','-','4','5','6','+','1',
+./interrupt.c:86:  idtR.limit = IDT_ENTRIES * sizeof(Gate) - 1;
+Binary file ./zeos.bin matches
+Binary file ./sched.o matches
+./system.c:2: * system.c -
+./system.c:32: *   DS, ES, FS, GS <- DS
+./system.c:33: *   SS:ESP <- DS:DATA_SEGMENT_SIZE
+./system.c:36: * cld -> gcc2 wants DF (Direction Flag (eFlags.df))
+./system.c:45:      esp = esp - 5*sizeof(DWord); /* To avoid overwriting task 1 */
+./user.lds:2: *  ZeOS - jcosta septembre 2006
+./user.lds:3: *  user.lds - Linker Script to create user memory image
+Binary file ./system matches
+Binary file ./utils.o matches
+Binary file ./build matches
+./mm.c:2: * mm.c - Memory Management: Paging & segment memory management
+./mm.c:212:/* alloc_frame - Search a free physical page (== frame) and mark it as USED_FRAME. 
+./mm.c:241:/* free_frame - Mark as FREE_FRAME the frame  'frame'.*/
+./mm.c:248:/* set_ss_pag - Associates logical page 'page' with physical page 'frame' */
+./mm.c:259:/* del_ss_pag - Removes mapping from logical page 'logical_page' */
+./mm.c:265:/* get_frame - Returns the physical frame associated to page 'logical_page' */
+Binary file ./libauxjp.a matches
+./sys_call_table.S:28:MAX_SYSCALL = (. - sys_call_table)/4
+./bootsect.S:119:! well, that went ok, I hope. Now we have to reprogram the interrupts :-(
+./bootsect.S:176:! Well, that certainly wasn't fun :-(. Hopefully it works, and we don't
+./bootsect.S:177:! need no steenking BIOS anyway (except for the initial loading :-).
+./bootsect.S:204:! in:	es - starting address segment (normally 0x1000)
+./bootsect.S:316:	jnz	empty_8042_loop	! yes - loop
+./bootsect.S:341:  .word  0xFFFF           ! 4Gb - (0x100000*0x1000 = 4Gb)
+./bootsect.S:346:  .word  0xFFFF           ! 4Gb - (0x100000*0x1000 = 4Gb)
+./bootsect.S:351:  .word  0xFFFF           ! 4Gb - (0x100000*0x1000 = 4Gb)
+./bootsect.S:356:  .word  0xFFFF           ! 4Gb - (0x100000*0x1000 = 4Gb)
+Binary file ./io.o matches
+Binary file ./interrupt.o matches
+./build.c:13: * - bootsect: exactly 512 bytes of 8086 machine code, loads the rest
+./build.c:14: * - setup: 8086 machine code, sets up system parm
+./build.c:15: * - system: 80386 code for actual system
+./build.c:139:		sz -= l;
+./build.c:161:		uz -= l;
